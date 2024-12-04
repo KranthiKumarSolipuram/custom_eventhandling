@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let col of gridColumns">
+                <a [routerLink]="[]" (click)="sortData(col)">{{col}}</a>
+                <!-- {{col}} -->
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of gridData">
+            <td *ngFor="let col of gridColumns">
+                {{row[col]}}
+            </td>
+            <td>
+                <a href="javascript:void(0)" (click)="selectRecord(row)">Edit</a> &nbsp; | &nbsp;
+                <a [routerLink]="[]" (click)="deleteRecord(row)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

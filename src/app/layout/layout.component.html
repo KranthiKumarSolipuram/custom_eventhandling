@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <a [routerLink]="['/']">Home</a> &nbsp; &nbsp; | &nbsp; &nbsp;
+            <a [routerLink]="['/employee']">Employee</a> &nbsp; &nbsp; | &nbsp; &nbsp;
+            <a [routerLink]="['/customer']">Customer</a> &nbsp; &nbsp; | &nbsp; &nbsp;
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-12" style="min-height: 600px;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            Designed by Kranthi
+        </div>
+    </div>
+</div>
