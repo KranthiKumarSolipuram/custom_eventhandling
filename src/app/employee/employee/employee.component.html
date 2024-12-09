@@ -17,6 +17,9 @@
     </tbody>
 </table> -->
 
+First Name : {{person.firstName}} <br>
+Last Name : {{person.lastName}} <br>
+
 <div class="col-4">
     <form class="addEmp" #addEmp="ngForm"  (ngSubmit)="addEmp.valid && addEmployee(addEmp)">
        <!-- {{employee|json}} -->
@@ -98,4 +101,7 @@
 </div>
 
 <br>
-<app-grid [dataList]="employees" (selectedObj)="selectEmployee($event)" (deleteObj)="deleteEmployee($event)"></app-grid>
+<app-grid [dataList]="employees" (selectedObj)="selectEmployee($event)" (deleteObj)="deleteEmployee($event)" >
+  <h3 class="header">Employees List</h3>
+  <h3 class="footer">End of Employee List</h3>
+</app-grid>

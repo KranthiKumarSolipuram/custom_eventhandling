@@ -76,4 +76,7 @@
   </div>
 
 <br>
-<app-grid [dataList]="customers" (selectedObj)="selectCust($event)" (deleteObj)="deleteCust($event)"></app-grid>
+<app-grid [dataList]="customers" (selectedObj)="selectCust($event)" (deleteObj)="deleteCust($event)">
+  <h3 class="header">Customer List</h3>
+  <h3 class="footer">End of the Customer List</h3>
+</app-grid>
